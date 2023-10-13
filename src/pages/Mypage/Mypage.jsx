@@ -1,14 +1,13 @@
 import React from "react";
+import "./style/Mypage.css";
 import Header from "../../common/Header";
-import Nav from "../../common/Nav";
 
-function MainPage() {
+function Mypage() {
   return (
     <div>
       <Header />
-      <Nav />
     </div>
   );
 }
 
-export default MainPage;
+export default Mypage;

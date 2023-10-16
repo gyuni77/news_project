@@ -7,3 +7,8 @@
 .kakaoBtn {
   cursor: pointer;
 }
+
+.NotMember {
+  color: gray;
+  cursor: pointer;
+}

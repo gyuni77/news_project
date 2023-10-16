@@ -22,7 +22,9 @@ function Login() {
         alt="kakao"
         style={{ cursor: "pointer" }}
       />
-      <div onClick={navigate("/main")}>비회원으로 로그인 하기</div>
+      <div className="NotMember" onClick={() => navigate("/main")}>
+        비회원으로 로그인 하기
+      </div>
     </div>
   );
 }

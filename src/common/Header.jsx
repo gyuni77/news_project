@@ -4,6 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
+  let IMG;
+
+  if (localStorage.getItem("ACCESS_TOKEN")) {
+    IMG = localStorage.getItem("PROFILE_IMG");
+  } else {
+    IMG = process.env.PUBLIC_URL + "../../assets/user.png";
+  }
 
   return (
     <div className="Header">
@@ -11,13 +18,14 @@ function Header() {
         src={process.env.PUBLIC_URL + "../../assets/news.png"}
         alt="logo"
         style={{ width: "15%", cursor: "pointer" }}
-        onClick={navigate("/")}
+        onClick={() => navigate("/main")}
       />
       <input className="inputTitle" placeholder="제목을 입력하세요" />
       <img
-        src={process.env.PUBLIC_URL + "../../assets/user.png"}
+        src={IMG}
         alt="user"
         style={{ width: "15%", cursor: "pointer" }}
+        onClick={() => navigate("/my")}
       />
     </div>
   );

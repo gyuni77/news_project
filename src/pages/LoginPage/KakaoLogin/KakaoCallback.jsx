@@ -31,7 +31,13 @@ function KakaoCallback() {
             },
           })
           .then((res) => {
+            console.log(res.data.properties);
             localStorage.setItem("NICKNAME", res.data.properties.nickname);
+            localStorage.setItem(
+              "PROFILE_IMG",
+              res.data.properties.profile_image
+            );
+            console.log(res);
             navigate("/main");
           })
           .catch((error) => {
@@ -43,7 +49,7 @@ function KakaoCallback() {
       });
   });
 
-  return <div>{/* <Nav nickname={nickname} /> */}</div>;
+  return <div></div>;
 }
 
 export default KakaoCallback;

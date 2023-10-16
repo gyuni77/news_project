@@ -14,9 +14,6 @@ function Nav() {
     { title: "오피니언", Eng: "OPINION" },
   ];
 
-  const nickname = localStorage.getItem("NICKNAME");
-
-  console.log(nickname);
   return (
     <div className="NavBar">
       {menu.map((item) => (

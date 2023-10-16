@@ -1,0 +1,21 @@
+.Privacy {
+  display: flex;
+  align-items: center;
+  margin-top: 3em;
+  box-shadow: 0 4px 4px -4px black;
+}
+
+.MyInfo {
+  margin-left: 2em;
+}
+
+.sciptArticle {
+  box-shadow: 0 4px 4px -4px black;
+}
+
+.Logout {
+  margin-top: 1em;
+  border: 1px solid black;
+  box-shadow: 0 4px 4px -4px black;
+  cursor: pointer;
+}

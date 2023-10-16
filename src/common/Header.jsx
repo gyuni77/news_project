@@ -24,7 +24,12 @@ function Header() {
       <img
         src={IMG}
         alt="user"
-        style={{ width: "15%", cursor: "pointer" }}
+        style={{
+          width: "15%",
+          cursor: "pointer",
+          overflow: "hidden",
+          borderRadius: "50%",
+        }}
         onClick={() => navigate("/my")}
       />
     </div>

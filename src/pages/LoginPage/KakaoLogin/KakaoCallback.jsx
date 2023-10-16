@@ -37,6 +37,7 @@ function KakaoCallback() {
               "PROFILE_IMG",
               res.data.properties.profile_image
             );
+            localStorage.setItem("E-MAIL", res.data.kakao_account.email);
             console.log(res);
             navigate("/main");
           })

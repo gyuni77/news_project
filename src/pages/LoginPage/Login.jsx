@@ -11,6 +11,15 @@ function Login() {
   };
 
   const navigate = useNavigate();
+
+  const NotMemberBtn = () => {
+    localStorage.removeItem("ACCESS_TOKEN");
+    localStorage.removeItem("PROFILE_IMG");
+    localStorage.removeItem("NICKNAME");
+    localStorage.removeItem("E-MAIL");
+    navigate("/main");
+  };
+
   return (
     <div className="Login">
       <div className="webExp">
@@ -28,7 +37,7 @@ function Login() {
         alt="kakao"
         style={{ cursor: "pointer", width: "60%" }}
       />
-      <div className="NotMember" onClick={() => navigate("/main")}>
+      <div className="NotMember" onClick={NotMemberBtn}>
         비회원으로 로그인 하기
       </div>
     </div>
